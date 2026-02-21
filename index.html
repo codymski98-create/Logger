@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual Boom ROW Logger</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>Dual Boom ROW Logger</h1>
+    </header>
+    <main id="app">
+        <section id="map"></section>
+        <section id="job-management">
+            <h2>Job Management</h2>
+            <button id="new-job">Create New Job</button>
+        </section>
+        <section id="spray-polygon">
+            <h2>Spray Polygon Tracking</h2>
+        </section>
+        <section id="weather-logging">
+            <h2>Weather Logging</h2>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Logger Application</p>
+    </footer>
+    <script>
+        // Initialize Leaflet Map
+        const map = L.map('map').setView([0, 0], 2);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Functionality for job management, spray polygon tracking, and weather logging
+        document.getElementById('new-job').onclick = function() {
+            alert('New job created!');
+        };
+    </script>
+</body>
+</html>
