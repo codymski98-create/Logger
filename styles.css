@@ -1,0 +1,14 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fafafa; color: #333; }
+header { background: #4CAF50; color: white; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+h1 { font-size: 24px; margin: 0; }
+main { display: flex; flex-direction: column; height: calc(100vh - 70px); }
+#map { flex: 1; width: 100%; min-height: 400px; }
+#job-management, #spray-polygon, #weather-logging { padding: 15px 20px; background: white; border-top: 1px solid #eee; }
+h2 { font-size: 18px; margin-bottom: 10px; color: #4CAF50; }
+button { padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 500; transition: background 0.2s; }
+button:hover { background: #45a049; }
+button:active { transform: scale(0.98); }
+footer { background: #f0f0f0; padding: 15px; text-align: center; font-size: 12px; color: #666; border-top: 1px solid #ddd; }
+@media (max-width: 768px) { h1 { font-size: 20px; } #job-management, #spray-polygon, #weather-logging { padding: 12px 15px; } button { padding: 8px 16px; font-size: 13px; } }
+@media (max-width: 480px) { main { height: calc(100vh - 60px); } #map { min-height: 300px; } button { width: 100%; } }
